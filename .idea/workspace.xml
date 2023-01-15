@@ -5,37 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a68a40ef-10f2-4a05-8044-c764605b5459" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/addon/c/addon.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/fields/ActionMissionField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/fields/FinishField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/fields/MoneyConField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/fields/MoneyProField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/GameMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/LeaderboardMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/MainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/RulesMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/utils/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/utils/Field.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/utils/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/utils/Leaderboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/utils/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/utils/PlayerClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/utils/Playfield.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/utils/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,17 +78,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Gradle.Draconem [build]">
     <configuration name="Draconem [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -200,6 +174,7 @@
       <updated>1673717793763</updated>
       <workItem from="1673717796790" duration="16037000" />
       <workItem from="1673784741093" duration="10920000" />
+      <workItem from="1673816056088" duration="320000" />
     </task>
     <servers />
   </component>
