@@ -19,6 +19,9 @@ public class Playfield {
     public void generateMap()
     {
         // TODO: generate map dynamically
+        // TODO: split field
+        // TODO: class fields
+        // TODO: class specific texts
         for(int i = 0;i < boardSize; i++)
         {
             if(i%4 == 0)

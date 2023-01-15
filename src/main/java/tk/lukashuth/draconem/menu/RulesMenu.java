@@ -134,7 +134,7 @@ public class RulesMenu implements GUI {
 
     @Override
     public void executeSelection() {
-        this.parent.selectMainMenu();
+        this.parent.openParent();
     }
 
     @Override

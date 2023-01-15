@@ -12,6 +12,7 @@ public class GameMenu implements GUI {
     private final ArrayList<String> output;
     private boolean paused;
     public void addOutput(String out) { this.output.add(out); }
+    public Game getGame() { return this.game; }
     public GameMenu(Screen screen, Controller parent)
     {
         this.state = 0;
@@ -21,9 +22,13 @@ public class GameMenu implements GUI {
         this.newGame = false;
         this.needsinput = false;
         this.output = new ArrayList<>();
+        this.addWelomeMessage();
+        this.paused = false;
+    }
+    private void addWelomeMessage()
+    {
         // TODO: welcome message
         this.output.add("Welcome to Draconem, you are one of a few who found their way to this world, have fun exploring it!");
-        this.paused = false;
     }
     @Override
     public void render() {
@@ -70,7 +75,7 @@ public class GameMenu implements GUI {
         for(int i = 0; i < this.game.getPlayers().size(); i+=2)
         {
             off += 2;
-            int playersLeft = this.game.getPlayers().size() - (i*2);
+            int playersLeft = this.game.getPlayers().size() - i;
             if(playersLeft < 2)
             {
                 Player p = this.game.getPlayer(i);
@@ -121,6 +126,7 @@ public class GameMenu implements GUI {
         {
             this.paused = true;
             this.parent.selectPauseGame();
+            this.saveGame();
         }
         if(this.newGame)
         {
@@ -175,6 +181,7 @@ public class GameMenu implements GUI {
             //TODO:  go to finish screen with player infos
             this.paused = true;
             this.parent.selectEndedGame();
+            this.saveGame();
             return;
         }
         this.needsinput = this.game.execute();
@@ -212,10 +219,17 @@ public class GameMenu implements GUI {
             this.newGame = true;
             this.activeCreatingPlayer = new StringBuilder();
             this.activeCreatingPlayer.append(2);
-            this.game.getPlayers().clear();
+            this.game = new Game(this);
             this.game.setPlayerCount(0);
+            this.output.clear();
+            this.addWelomeMessage();
+            this.paused = false;
             this.error = "";
         }
+    }
+    private void saveGame()
+    {
+        // TODO: save game
     }
     private boolean newGame;
     public void setState(int state) { this.state = state; }

@@ -56,7 +56,7 @@ public class LeaderboardMenu implements GUI {
 
     @Override
     public void executeSelection() {
-        this.parent.selectMainMenu();
+        this.parent.openParent();
     }
 
     @Override

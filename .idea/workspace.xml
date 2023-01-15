@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a68a40ef-10f2-4a05-8044-c764605b5459" name="Changes" comment="">
+    <list default="true" id="a68a40ef-10f2-4a05-8044-c764605b5459" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/FinishedMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/PauseMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/GameMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/GameMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/LeaderboardMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/LeaderboardMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/RulesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/menu/RulesMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/utils/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/utils/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/utils/Playfield.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tk/lukashuth/draconem/utils/Playfield.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +88,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
@@ -174,7 +179,6 @@
       <updated>1673717793763</updated>
       <workItem from="1673717796790" duration="16037000" />
       <workItem from="1673784741093" duration="10920000" />
-      <workItem from="1673816056088" duration="320000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,9 @@ public class Controller {
     private final GUI rulesMenu;
     private final GUI gameMenu;
     private final GUI leaderboardMenu;
+    private final GUI pauseMenu;
+    private final GUI finishedMenu;
+    private GUI last;
     private GUI active;
     private boolean run;
     public GUI getGameMenu() { return this.gameMenu; }
@@ -19,7 +22,10 @@ public class Controller {
         this.rulesMenu = new RulesMenu(this.screen, this);
         this.gameMenu = new GameMenu(this.screen, this);
         this.leaderboardMenu = new LeaderboardMenu(this.screen, this);
+        this.pauseMenu = new PauseMenu(this.screen, this);
+        this.finishedMenu = new FinishedMenu(this.screen, this);
         this.active = this.mainMenu;
+        this.last = this.mainMenu;
         this.run = true;
     }
     private static final double framerate = 60;
@@ -41,6 +47,7 @@ public class Controller {
     public void selectMainMenu()
     {
         this.active = this.mainMenu;
+        this.last = this.mainMenu;
     }
     public void selectRules()
     {
@@ -52,24 +59,30 @@ public class Controller {
     }
     public void selectNewGame()
     {
-        // TODO: create new game
         this.selectGame();
         this.active.setState(2);
     }
     public void selectLoadGame()
     {
-        // TODO: load game
         this.selectGame();
         this.active.setState(1);
     }
     public void selectPauseGame()
     {
-        this.exitGame(); // only for debug
+        //this.exitGame(); // only for debug
         //TODO: select pause game
+        this.active = this.pauseMenu;
+        this.last = this.pauseMenu;
+    }
+    public void openParent()
+    {
+        this.active = this.last;
     }
     public void selectEndedGame()
     {
         // TODO: select ended game screen
+        this.active = this.finishedMenu;
+        this.last = this.finishedMenu;
     }
     public void selectGame()
     {
@@ -83,4 +96,5 @@ public class Controller {
     {
         this.active.reset();
     }
+    public void resumeActive() { this.active.resume(); }
 }
