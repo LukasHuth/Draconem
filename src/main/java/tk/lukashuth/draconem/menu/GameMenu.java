@@ -12,6 +12,11 @@ public class GameMenu implements GUI {
     private final ArrayList<String> output;
     private boolean paused;
     public void addOutput(String out) { this.output.add(out); }
+    public void removeOutput(int index)
+    {
+        this.output.remove(this.output.size()-index-1);
+    }
+    public int getOutputLength() { return this.output.size(); }
     public Game getGame() { return this.game; }
     public GameMenu(Screen screen, Controller parent)
     {
@@ -29,6 +34,7 @@ public class GameMenu implements GUI {
     {
         // TODO: welcome message
         this.output.add("Welcome to Draconem, you are one of a few who found their way to this world, have fun exploring it!");
+        for(int i = 0;i < 3; i++) this.output.add("");
     }
     @Override
     public void render() {
@@ -168,14 +174,9 @@ public class GameMenu implements GUI {
         }
         if(this.needsinput)
         {
-            if(input == 13)
-            {
-                this.needsinput = this.game.giveInput(this.input);
-                return;
-            }
-            if(input-'0' < 0 || input-'0'>9) return;
-            this.input = input-'0';
-            return;
+            this.needsinput = this.game.giveInput(input);
+            if(this.needsinput) return;
+            this.spaceOutput(2);
         }
         if(this.game.isFinished()) {
             //TODO:  go to finish screen with player infos
@@ -185,10 +186,7 @@ public class GameMenu implements GUI {
             return;
         }
         this.needsinput = this.game.execute();
-        if(this.needsinput){
-            this.input = 0;
-            return;
-        }
+        if(this.needsinput) return;
         this.spaceOutput(2);
         this.cleanOutput();
     }
@@ -212,9 +210,10 @@ public class GameMenu implements GUI {
     @Override
     public void reset() {
         this.game = new Game(this);
-        if(state==1){
+        if(this.state==1){
             //TODO: load game
-        } else if(state == 2)
+            this.loadGame();
+        } else if(this.state == 2)
         {
             this.newGame = true;
             this.activeCreatingPlayer = new StringBuilder();
@@ -224,8 +223,13 @@ public class GameMenu implements GUI {
             this.output.clear();
             this.addWelomeMessage();
             this.paused = false;
+            this.needsinput = false;
             this.error = "";
         }
+    }
+    private void loadGame()
+    {
+        // TODO: load game
     }
     private void saveGame()
     {

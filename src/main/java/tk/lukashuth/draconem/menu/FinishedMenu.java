@@ -1,6 +1,8 @@
 package tk.lukashuth.draconem.menu;
 
 import tk.lukashuth.draconem.utils.Controller;
+import tk.lukashuth.draconem.utils.Game;
+import tk.lukashuth.draconem.utils.Player;
 import tk.lukashuth.draconem.utils.Screen;
 
 public class FinishedMenu implements GUI {
@@ -26,7 +28,11 @@ public class FinishedMenu implements GUI {
         offset+=unusable;
         this.screen.drawStringToMiddle(title, offset);
         offset+=4;
-        String result = "Player1 won with 100g in front of Player3";
+        Game g = ((GameMenu) this.parent.getGameMenu()).getGame();
+        g.sortPlayers();
+        Player p1 = g.getPlayer(0);
+        Player p2 = g.getPlayer(1);
+        String result = "%s won with %dg in front of %s".formatted(p1.getName(), p1.getMoney()-p2.getMoney(), p2.getName());
         this.screen.drawStringToMiddle(result, offset);
         offset+=2;
         String opt;

@@ -3,13 +3,6 @@
 #include <conio.h>
 #include <windows.h>
 
-struct SMALL_RECT {
-    SHORT Left;
-    SHORT Top;
-    SHORT Right;
-    SHORT Bottom;
-};
-
 JNIEXPORT void JNICALL
 Java_tk_lukashuth_draconem_Main_setCursorTo(JNIEnv *env, jobject obj, jint _x, jint _y)
 {

@@ -1,9 +1,6 @@
 package tk.lukashuth.draconem.utils;
 
-import tk.lukashuth.draconem.fields.ActionMissionField;
-import tk.lukashuth.draconem.fields.FinishField;
-import tk.lukashuth.draconem.fields.MoneyConField;
-import tk.lukashuth.draconem.fields.MoneyProField;
+import tk.lukashuth.draconem.fields.*;
 
 import java.util.HashMap;
 
@@ -39,6 +36,7 @@ public class Playfield {
             }
         }
         this.playfield.put(boardSize, new FinishField(this));
+        this.playfield.put(0.0, new StartField(this));
     }
     public Game getParent() { return this.parent; }
     public double toNextPause(double pos)

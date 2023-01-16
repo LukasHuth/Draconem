@@ -3,6 +3,9 @@ package tk.lukashuth.draconem.utils;
 import tk.lukashuth.draconem.menu.GameMenu;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Game {
     private Playfield playfield;
@@ -41,22 +44,27 @@ public class Game {
     private boolean neededInput;
     public boolean execute()
     {
-        if(this.neededInput) return true;
         boolean needsInput = false;
         Player p = this.getPlayer(activePlayer%this.playerCount);
         Field f = this.playfield.getField(p.getPosition());
         needsInput = f.execute(p);
-        this.neededInput = needsInput;
+        if(needsInput) return true;
+        this.advancePlayer(p);
+        return false;
+    }
+    private void advancePlayer(Player p)
+    {
         activePlayer++;
         p.move(Math.round(Math.random()*6+1));
-        return needsInput;
     }
     public boolean giveInput(int input)
     {
         Player p = this.getPlayer(activePlayer%this.playerCount);
         Field f = this.playfield.getField(p.getPosition());
-        this.neededInput = f.giveInput(input, p);
-        return this.neededInput;
+        boolean neededInput = f.giveInput(input, p);
+        if(neededInput) return true;
+        this.advancePlayer(p);
+        return false;
     }
     public boolean isFinished()
     {
@@ -65,5 +73,9 @@ public class Game {
             if(!p.isFinished()) return false;
         }
         return true;
+    }
+    public void sortPlayers()
+    {
+        this.players.sort((o1, o2) -> o2.getMoney() - o1.getMoney());
     }
 }
